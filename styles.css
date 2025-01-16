@@ -6,3 +6,75 @@ available in the app when your plugin is enabled.
 If your plugin does not need CSS, delete this file.
 
 */
+/* Keyboard shortcut container */
+.kbd {
+	display: inline-flex !important;
+	vertical-align: middle;
+	white-space: nowrap;
+	gap: 4px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	font-size: 0.85em;
+	font-weight: 500;
+	color: var(--text-normal);
+	background: var(--background-modifier-form-field);
+	padding: 4px 8px;
+	border-radius: 6px;
+	border: 1px solid var(--background-modifier-border);
+	box-shadow:
+		0 1px 0 rgba(0, 0, 0, 0.08),
+		inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* Individual key styling */
+.kbd span {
+	display: inline-block;
+	padding: 3px 6px;
+	min-width: 20px;
+	text-align: center;
+	background: var(--background-primary);
+	border-radius: 4px;
+	border: 1px solid var(--background-modifier-border-hover);
+	box-shadow:
+		0 2px 0 var(--background-modifier-border),
+		inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Separator between keys */
+.kbd span + span::before {
+	content: "+";
+	margin: 0 2px 0 -2px;
+	color: var(--text-muted);
+}
+
+/* Dark theme adjustments */
+.theme-dark .kbd {
+	background: rgba(0, 0, 0, 0.2);
+	border-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .kbd span {
+	background: rgba(0, 0, 0, 0.3);
+	border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* High contrast & accessibility */
+@media (prefers-contrast: more) {
+	.kbd,
+	.kbd span {
+		border-width: 2px;
+	}
+}
+
+/* Animation on hover */
+.kbd span {
+	transition: transform 0.1s ease-in-out;
+}
+
+.kbd span:hover {
+	transform: translateY(1px);
+}
+
+/* Optional: Add support for different key sizes */
+.kbd span.wide {
+	min-width: 40px;
+}

@@ -1,11 +1,10 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "keyboard-shortcut-display",
+	"name": "Keyboard Shortcut Display",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": "Makes it easier to insert keyboard shortcuts into your notes.",
+	"author": "Alexander Michler",
+	"authorUrl": "https://github.com/w3z315",
 	"isDesktopOnly": false
 }
